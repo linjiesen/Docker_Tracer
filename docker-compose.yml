@@ -13,7 +13,7 @@ services:
     image: daocloud.io/mysql:5.7
     environment:
       - MYSQL_DATABASE=Tracer # 数据库名称
-      - MYSQL_ROOT_PASSWORD=kid1412 # 数据库密码
+      - MYSQL_ROOT_PASSWORD=77582358991 # 数据库密码
     volumes:
       - ./deployment/mysql/data:/var/lib/mysql # 挂载数据库数据
       - ./deployment/mysql/conf/my.cnf:/etc/mysql/my.cnf # 挂载配置文件
@@ -39,7 +39,7 @@ services:
     restart: always
 
   nginx:
-    build: deployment/nginx
+    build: nginx
     ports:
       - "80:80"
       - "443:443"
@@ -48,7 +48,6 @@ services:
     volumes:
       - ./collect_static:/usr/share/nginx/html/static # 挂载静态文件
       - ./media:/usr/share/nginx/html/media # 挂载上传文件
-      - ./deployment/nginx/ssl:/usr/share/nginx/ssl # 挂载ssl证书目录
     links:
       - web
     depends_on:
