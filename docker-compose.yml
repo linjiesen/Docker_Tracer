@@ -2,9 +2,11 @@ version: "3"
 services:
   redis:
     image: daocloud.io/redis:3
-    command: redis-server
+    command: redis-server /etc/redis/redis.conf
     volumes:
       - ./deployment/redis:/data
+      - ./compose/redis/redis.conf:/etc/redis/redis.conf # 挂载redis配置文件
+
     ports:
       - "6379:6379"
     restart: always # always表容器运行发生错误时一直重启

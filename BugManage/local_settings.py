@@ -19,6 +19,7 @@ CACHES = {
                 "encoding": 'utf-8'
             },
             'SOCKER_TIMEOUT': 10,
+            'PASSWORD': "123456",
         }
     }
 }
