@@ -17,7 +17,7 @@ urlpatterns = [
     url(r'^send/sms/$', account.send_sms, name='send_sms'),
     url(r'^login/$', account.login, name='login'),
     url(r'^logout/$', account.logout, name='logout'),
-    url(r'^index/$', home.index, name='index'),
+    url(r'', home.index, name='index'),
 
     url(r'^price/$', home.price, name='price'),
     url(r'^payment/(?P<policy_id>\d+)/$', home.payment, name='payment'),

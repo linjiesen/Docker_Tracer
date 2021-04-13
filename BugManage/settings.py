@@ -129,6 +129,12 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
+
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 # 騰訊雲短信應用的app_id
 TENCENT_SMS_APP_ID = 66666666
 # 騰訊雲短信應用的 app_key
