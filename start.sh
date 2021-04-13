@@ -7,4 +7,4 @@
 python manage.py collectstatic --noinput&&
 python manage.py makemigrations&&
 python manage.py migrate&&
-gunicorn Docker_Tracer.wsgi:application -c gunicorn.conf
+gunicorn BugManage.wsgi:application -c gunicorn.conf
