@@ -6,7 +6,6 @@ crcmod==1.7
 cryptography==2.3.1
 defusedxml==0.5.0
 dicttoxml==1.7.4
-diff-match-patch==20181111
 Django==3.0.7
 django-crispy-forms==1.7.2
 django-formtools==2.1
