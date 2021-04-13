@@ -2,7 +2,7 @@
 FROM daocloud.io/python:3.6
 
 # 镜像作者
-MAINTAINER zyk 2295098032@qq.com
+MAINTAINER Alroy sqrtln@163.com
 
 # 设置 python 环境变量
 ENV PYTHONUNBUFFERED 1
@@ -17,7 +17,7 @@ WORKDIR /Docker_Tracer
 ADD . /Docker_Tracer
 
 # 利用 pip 安装依赖（- i 表示指定清华源，默认源下载过慢）
-RUN pip3 install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple/
+RUN pip install --upgrade pip && pip3 install -r requirements.txt
 
 #设置环境变量
 ENV SPIDER=/Docker_Tracer
