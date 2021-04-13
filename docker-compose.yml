@@ -16,7 +16,7 @@ services:
       - MYSQL_ROOT_PASSWORD=77582358991 # 数据库密码
     volumes:
       - ./deployment/mysql/data:/var/lib/mysql # 挂载数据库数据
-      - ./deployment/mysql/conf/my.cnf:/etc/mysql/my.cnf/default.conf # 挂载配置文件
+      - ./deployment/mysql/conf/my.cnf:/etc/mysql/my.cnf # 挂载配置文件
       - ./deployment/mysql/init:/docker-entrypoint-initdb.d/ # 挂载数据初始化sql脚本
     ports:
       - "3306:3306"
