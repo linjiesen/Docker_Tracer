@@ -17,7 +17,7 @@ WORKDIR /Docker_Tracer
 ADD . /Docker_Tracer
 
 # 利用 pip 安装依赖（- i 表示指定清华源，默认源下载过慢）
-RUN pip install --upgrade pip && pip3 install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
 #设置环境变量
 ENV SPIDER=/Docker_Tracer
